@@ -6,103 +6,261 @@
     <title>WattsUp Support</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-        }
-        h1, h2 {
+            background-color: #f8f9fa;
             color: #333;
         }
-        p {
-            margin-bottom: 15px;
-        }
-        .section {
+        .header {
+            background: linear-gradient(135deg, #00D4FF 0%, #0088CC 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
             margin-bottom: 30px;
         }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #0088CC;
+            border-bottom: 2px solid #00D4FF;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
         .faq-item {
-            margin-bottom: 20px;
-            border-left: 4px solid #FFD700;
-            padding-left: 15px;
+            margin-bottom: 25px;
+            border-left: 4px solid #00D4FF;
+            padding-left: 20px;
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-radius: 8px;
+        }
+        .faq-item h3 {
+            color: #0088CC;
+            margin-top: 0;
+            margin-bottom: 10px;
         }
         .contact-info {
-            background-color: #f9f9f9;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+        .contact-info p {
+            margin: 8px 0;
+        }
+        .contact-info strong {
+            color: #0088CC;
+        }
+        .app-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .app-info div {
+            background: #f8f9fa;
             padding: 15px;
-            border-radius: 5px;
+            border-radius: 8px;
+            border-left: 4px solid #00D4FF;
+        }
+        .app-info strong {
+            color: #0088CC;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .troubleshooting-list {
+            list-style: none;
+            padding: 0;
+        }
+        .troubleshooting-list li {
+            background: #f8f9fa;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #FFD700;
+        }
+        .troubleshooting-list strong {
+            color: #0088CC;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .feedback-section {
+            background: linear-gradient(135deg, #00D4FF 0%, #0088CC 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .feedback-section h2 {
+            color: white;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        a {
+            color: #0088CC;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 5px;
         }
     </style>
 </head>
 <body>
-    <h1>WattsUp Support</h1>
-    <p>Welcome to WattsUp Support! We're here to help you get the most out of your weather app. If you have questions, need assistance, or want to provide feedback, you've come to the right place.</p>
+    <div class="header">
+        <h1>⚡ WattsUp Support</h1>
+        <p>Your universal energy consumption tracking companion</p>
+    </div>
 
     <div class="section">
         <h2>Frequently Asked Questions (FAQ)</h2>
 
         <div class="faq-item">
-            <h3>How do I enable location services?</h3>
-            <p>To get accurate weather forecasts, ensure location services are enabled for WattsUp in your device settings. Go to Settings > Privacy > Location Services > WattsUp and select "While Using the App".</p>
+            <h3>🔌 How do I add my appliances to WattsUp?</h3>
+            <p>Navigate to the "Manage Appliances" section and tap the "+" button. Enter your appliance details including name, wattage, and usage hours. WattsUp will automatically calculate your energy consumption.</p>
         </div>
 
         <div class="faq-item">
-            <h3>Why isn't my location detected accurately?</h3>
-            <p>Make sure you have a stable internet connection and GPS enabled. If you're indoors, try going outside or near a window for better GPS reception.</p>
+            <h3>📊 How accurate are the kWh calculations?</h3>
+            <p>WattsUp uses industry-standard calculations based on appliance wattage and usage time. For the most accurate results, ensure you enter precise wattage ratings and realistic usage hours.</p>
         </div>
 
         <div class="faq-item">
-            <h3>How do I change the temperature units?</h3>
-            <p>In the app settings, you can toggle between Celsius and Fahrenheit. Look for the settings icon (gear) in the main menu.</p>
+            <h3>📱 How do I manually enter meter readings?</h3>
+            <p>Go to the manual reading entry screen and input your current meter reading along with the date. WattsUp will calculate the difference and track your consumption over time.</p>
         </div>
 
         <div class="faq-item">
-            <h3>I'm not receiving notifications. What should I do?</h3>
-            <p>Check your device notification settings for WattsUp. Ensure notifications are enabled and the app has permission to send alerts. You can manage notification preferences within the app.</p>
+            <h3>💰 Can WattsUp calculate my electricity bills?</h3>
+            <p>Yes! Set your electricity rate in the settings and WattsUp will estimate your monthly bills based on your tracked consumption. Note: Rates vary by location and provider.</p>
         </div>
 
         <div class="faq-item">
-            <h3>How do I report a bug or suggest a feature?</h3>
-            <p>We value your feedback! Use the contact information below to reach out with bug reports, feature requests, or general suggestions.</p>
+            <h3>📈 How do I view my consumption analytics?</h3>
+            <p>Access the analytics section to view consumption trends, peak usage times, and cost breakdowns. Charts show daily, weekly, and monthly consumption patterns.</p>
         </div>
 
         <div class="faq-item">
-            <h3>Is my data secure?</h3>
-            <p>Yes, we take your privacy seriously. Your location data is used only for weather services and is not stored permanently. For more details, please review our Privacy Policy.</p>
+            <h3>🌍 Does WattsUp work in my country?</h3>
+            <p>Absolutely! WattsUp is designed as a universal kWh tracker that works worldwide. Simply set your local electricity rate and currency in the app settings.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>🔔 How do I set consumption alerts?</h3>
+            <p>Set budget limits in the app settings to receive notifications when you're approaching your target consumption or budget. This helps you stay within your energy goals.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>🔒 Is my energy data secure and private?</h3>
+            <p>Yes, your data is stored locally on your device and never shared with third parties. We take your privacy seriously. For detailed information, please review our Privacy Policy.</p>
         </div>
     </div>
 
     <div class="section">
-        <h2>Contact Us</h2>
+        <h2>📞 Contact Us</h2>
         <div class="contact-info">
-            <p><strong>Email:</strong> <a href="mailto:support@wattsup.app">support@wattsup.app</a></p>
-            <p><strong>Response Time:</strong> We aim to respond to all inquiries within 24-48 hours.</p>
-            <p><strong>Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM EST</p>
+            <p><strong>📧 Email:</strong> <a href="mailto:support@wattsup.app">support@wattsup.app</a></p>
+            <p><strong>⏰ Response Time:</strong> We aim to respond to all inquiries within 24-48 hours.</p>
+            <p><strong>🕐 Support Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM EST</p>
+            <p><strong>🌍 Global Support:</strong> We provide support for users worldwide</p>
         </div>
     </div>
 
     <div class="section">
-        <h2>App Information</h2>
-        <p><strong>App Name:</strong> WattsUp</p>
-        <p><strong>Version:</strong> 1.0.1</p>
-        <p><strong>Platforms:</strong> iOS and Android</p>
-        <p><strong>Description:</strong> Your personal weather companion providing accurate forecasts, current conditions, and weather alerts wherever you go.</p>
+        <h2>📱 App Information</h2>
+        <div class="app-info">
+            <div>
+                <strong>App Name</strong>
+                WattsUp ⚡ - Universal Energy Tracker
+            </div>
+            <div>
+                <strong>Current Version</strong>
+                1.0.7
+            </div>
+            <div>
+                <strong>Platforms</strong>
+                Android and iOS
+            </div>
+            <div>
+                <strong>Category</strong>
+                Utilities / Energy Management
+            </div>
+        </div>
+        <p><strong>Description:</strong> WattsUp is your comprehensive energy consumption tracking solution. Monitor appliance usage, track kWh consumption, calculate electricity costs, and optimize your energy efficiency with detailed analytics and insights.</p>
     </div>
 
     <div class="section">
-        <h2>Troubleshooting Tips</h2>
-        <ul>
-            <li><strong>App Crashing:</strong> Try force-closing the app and reopening it. If issues persist, restart your device.</li>
-            <li><strong>Slow Performance:</strong> Ensure you have a stable internet connection. Clear app cache if available in settings.</li>
-            <li><strong>Outdated Information:</strong> Pull down to refresh weather data or check your internet connection.</li>
+        <h2>🔧 Troubleshooting Tips</h2>
+        <ul class="troubleshooting-list">
+            <li>
+                <strong>App Crashes or Freezes</strong>
+                Force-close the app and restart it. If issues persist, restart your device and ensure you have the latest app version installed.
+            </li>
+            <li>
+                <strong>Inaccurate Consumption Calculations</strong>
+                Double-check your appliance wattage ratings and usage hours. Ensure all appliances are properly categorized and rated.
+            </li>
+            <li>
+                <strong>Missing Analytics Data</strong>
+                Make sure you've entered sufficient consumption readings. Analytics require multiple data points to show meaningful trends.
+            </li>
+            <li>
+                <strong>Bill Estimates Not Matching</strong>
+                Verify your electricity rate is set correctly in settings. Rates vary by region and provider - check your latest electricity bill.
+            </li>
+            <li>
+                <strong>Slow App Performance</strong>
+                Ensure you have a stable internet connection for data synchronization. Clear app cache if performance issues occur.
+            </li>
+            <li>
+                <strong>Data Not Saving</strong>
+                Check that you have sufficient storage space on your device. Data is stored locally and requires available device storage.
+            </li>
         </ul>
     </div>
 
-    <div class="section">
-        <h2>Feedback and Suggestions</h2>
-        <p>We love hearing from our users! Your feedback helps us improve WattsUp. Whether it's a bug report, feature idea, or general comment, don't hesitate to reach out.</p>
-        <p><strong>Rate Us:</strong> If you're enjoying WattsUp, please leave a review on the App Store or Google Play Store. Your support helps us grow!</p>
+    <div class="section feedback-section">
+        <h2>💬 Feedback and Suggestions</h2>
+        <p>We love hearing from our energy-conscious users! Your feedback helps us improve WattsUp and add features that matter most to you.</p>
+        <p>Whether it's reporting a bug, suggesting a new feature, or sharing your energy-saving success story, don't hesitate to reach out.</p>
+        <p><strong>⭐ Rate Us:</strong> If WattsUp is helping you save energy and money, please leave a review on the Google Play Store or App Store. Your support helps us grow and improve!</p>
     </div>
 
-    <p>Thank you for choosing WattsUp for your weather needs. Stay informed and stay safe!</p>
+    <div class="section">
+        <h2>🎯 Energy Saving Tips</h2>
+        <p>WattsUp isn't just about tracking consumption—it's about helping you save energy and money. Here are some tips to maximize your savings:</p>
+        <ul>
+            <li><strong>Monitor Peak Hours:</strong> Use analytics to identify when you consume the most energy and shift usage to off-peak times</li>
+            <li><strong>Identify Energy Hogs:</strong> Check which appliances consume the most power and consider more efficient alternatives</li>
+            <li><strong>Set Realistic Goals:</strong> Use budget features to set achievable consumption targets</li>
+            <li><strong>Regular Monitoring:</strong> Check your consumption regularly to stay aware of your energy patterns</li>
+            <li><strong>Compare Periods:</strong> Use analytics to compare consumption across different time periods</li>
+        </ul>
+    </div>
+
+    <p style="text-align: center; color: #666; margin-top: 40px;">
+        Thank you for choosing WattsUp to manage your energy consumption. Together, let's create a more energy-efficient future! 🌱⚡
+    </p>
 </body>
 </html>
